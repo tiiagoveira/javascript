@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa</title>
+    <style>
+        body {
+            background-color: lightblue;
+            color: white;
+            font: normal 20px Arial;
+        }
+
+        h1 {
+            color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <script> 
+        var nome = window.prompt('Digite seu nome...')
+        var idade = window.prompt('Digite sua idade...')
+
+        // Para fazer a concatenação de forma mais legível subistituíndo o sinal de ( + )
+        // Utiliza o cifrão( $ ) em seguida as chaves( { } ) e a variável a ser impresa dentro delas
+        // Todo o conteúdo  a ser concatenado deve estar dentro da crase ( ` ` )
+        // o  conjuto de ( ${} ) é conhecido como (place holder)
+        window.alert(`Seja bem vindo ${nome}, você tem ${idade} anos`)
+    </script>
+</body>
+</html>

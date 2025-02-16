@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa</title>
+    <style>
+        body {
+            background-color: lightblue;
+            color: white;
+            font: normal 20px Arial;
+        }
+
+        h1 {
+            color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <script> 
+         
+        // O prompt retorna uma (string) por isso, precisamos fazer a transformação para numeros (inteiros ou reais).
+        // Pode ser feito com o (parse) + o tipo do número desejado (inteiro e real)
+        var n1 = Number.parseFloat(window.prompt('Digite um numero '))
+
+        // Ou apenas utilizando o (Number) que ele por si só reconhece o tipo informado e faz a transformação
+        var n2 = Number(window.prompt('Digite outro numero '))
+       
+        // Criando um variável para receber a soma dos dois valores
+        var s = n1 + n2
+        window.alert('A soma de ' + n1  + ' e ' + n2 + ' é... ' + s)
+    </script>
+</body>
+</html>

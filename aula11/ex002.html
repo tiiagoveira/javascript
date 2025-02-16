@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cidadania</title>
+</head>
+<body>
+    <h1>Cidadania</h1>
+    Informe o seu país: <input type="text" name="txt1" id="txt1">
+    <input type="button" value="Verificar" id="bt1">
+    <div id="res"><p><ins>Resultado</ins></p></div>
+
+    <script>
+        var país = 'Brasil'
+        var br = document.getElementById('txt1')
+        var bt = document.querySelector('input#bt1')
+        var res = document.querySelector('div#res')
+        
+        bt.addEventListener('click', clicar)
+
+        function clicar() {
+            if (br.value != país){
+                res.innerHTML += `<p>Você é <strong>Estrangeiro</strong></p>`
+            } else {
+                res.innerHTML += `<p>Sua nacionalidade é <strong>Brasileira</strong></p>`
+            }
+        }
+    </script>
+</body>
+</html>

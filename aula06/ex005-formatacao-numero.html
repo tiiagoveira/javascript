@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa</title>
+    <style>
+        body {
+            background-color: lightblue;
+            color: black;
+            font: normal 20px Arial;
+        }
+
+        h1 {
+            color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <script> 
+        var n1 = Number(window.prompt('Digite um número'))
+        
+        // Fixando 2 caracteres após o ponto flutuante
+        document.writeln(`O valor digitado até 2 casa decimais é... ${n1.toFixed(2)} <br>`)
+
+        // Transformando o valor de (n1) em um valor mornetário, acrescentando a siglas da moeda antes do valor
+        // (toLocaleString) informando a localização da string
+        // ({style: 'currency') formatando o estilo para valor monetrário
+        // (currency: 'valor monetário') informando qual o valor monetário desejado para a exibição
+        document.writeln(`Em Real ${n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} <br>`)
+        document.writeln(`Em Dolar ${n1.toLocaleString('en-US', {style: 'currency', currency: 'USD'})} <br>`)
+        document.writeln(`Em Euro ${n1.toLocaleString('it-IT', {style: 'currency', currency: 'EUR'})} <br>`)
+
+        // Transforma o primeiro valor encontrado pelo valor informado
+        document.writeln(`Subistituindo um valor desejados... ${n1.toFixed(2).replace('.', ',')} nesse caso o (.) como era acima por (,) <br>`)
+    </script>
+</body>
+</html>

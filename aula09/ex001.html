@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body {
+            background-color: lightcoral;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    
+    <p>Aqui vai o resultado 1 getElement</p>
+    
+    <p id="p1">Aqui vai o resultado 2 getElement com id</p>
+    
+    <p name="p2">Aqui vai o resultado 3 getElement com name</p>
+    
+    <p class="p3">Aqui vai o resultado 3 getElement com class</p>
+   
+    <p id="p4">Aqui vai o resultado 1 querySelect com id</p>
+
+    <p class="p5">Aqui vai o resultado 2 querySelect com class</p>
+    
+    <script>
+        // pegando o elemento pela tag e alterando
+        var p = window.document.getElementsByTagName('p')[0]
+        p.style.backgroundColor = 'blue'
+
+        // pegando o elemento e alterando utilizando o (id)
+        var p1 = window.document.getElementById('p1')
+        p1.style.backgroundColor = 'green'
+        
+        // alterando o valor do parágrafo anterior por esse novo valor
+        p1.innerText = 'Adicionando nova mensagem'
+
+        // pegando o elemento e alterando utilizando o (name)
+        var p2 = window.document.getElementsByName('p2')[0]
+        p2.style.backgroundColor = 'red'
+
+        // pegando o elemento e alterando utilizando o (class)
+        var p3 = window.document.getElementsByClassName('p3')[0]
+        p3.style.backgroundColor = 'yellow'
+
+        // mesma função que os de cima, porém não precisa ter um get para cada tipo
+        // assim tendo uma forma que engloba todas
+        // nesse caso fazendo com os elementos que tem id
+        var p4 = window.document.querySelector('p#p4')
+        p4.style.backgroundColor = 'black'
+        p4.style.color = 'white'
+
+        // nesse caso fazendo com os elementos que tem class
+        var p5 = window.document.querySelector('p.p5')
+        p5.style.backgroundColor = 'orange'
+    </script>
+</body>
+</html>
